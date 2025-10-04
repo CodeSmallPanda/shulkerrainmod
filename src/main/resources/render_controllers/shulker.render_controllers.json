@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.default": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ]
+    },
+    "controller.render.outline": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.outline" } ],
+      "textures": [ "Texture.default" ],
+      "overlay_color": {
+        "r": "1.0",
+        "g": "0.5",
+        "b": "0.2",
+        "a": "0.25"
+      },
+      "ignore_lighting": true,
+      "smooth_normal": true,
+      "conditions": [
+        {
+          "expression": "query.get_name == 'falling_shulker'",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

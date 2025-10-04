@@ -1,0 +1,33 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:shulker",
+      "materials": {
+        "default": "entity_alphatest",
+        "outline": "netease_entity_alphatest_outline"
+      },
+      "textures": {
+        "default": "textures/entity/shulker/shulker"
+      },
+      "geometry": {
+        "default": "geometry.shulker"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ShulkerHeadOffset = Math.sin((variable.ShulkerAge + variable.ShulkerClientAnimation) * 100);"
+        ]
+      },
+      "animations": {
+        "move": "animation.shulker.move"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.shulker.move" }
+      ],
+      "render_controllers": [
+        "controller.render.default",
+        "controller.render.outline"
+      ]
+    }
+  }
+}
